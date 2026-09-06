@@ -2,8 +2,6 @@
 //COMSC - 210 - 5293
 //Lab 4 - Vector of Structs
 
-//Milestone 4: your code is ready for submission.
-
 #include <iostream>
 #include <vector>
 #include <cstdlib> //for random numbers
@@ -44,14 +42,19 @@ int main(){
 
     //Time to make output look pretty
     //Top Row
-    cout << " Color # " << setw(10) << "R Value" << setw(10) 
+    cout << "Color #" << setw(10) << "R Value" << setw(10) 
          << "G Value" << setw(10) << "B Value" << endl; 
 
-    cout << " ------" << setw(12) << "------ " << setw(10)
-         << "------ " << setw(10) << "------ " << endl;
+    cout << "------" << setw(10) << "------" << setw(10)
+         << "------" << setw(10) << "------" << endl;
 
-
-    
+    //Another loop to display each color one by one
+    for (int i = 0; i < colorList.size(); i++){
+        //I did i + 1 because it starts at 0
+        cout << setw(4) << i + 1 << setw(12) << colorList[i].red
+             << setw(10) << colorList[i].green
+             << setw(10) << colorList[i].blue << endl;
+    }
 
     return 0;
 }
