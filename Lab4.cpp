@@ -2,13 +2,13 @@
 //COMSC - 210 - 5293
 //Lab 4 - Vector of Structs
 
-//Milestone 3: your code runs up to this point
-//outputs in any format the vector data for confirmation.
+//Milestone 4: your code is ready for submission.
 
 #include <iostream>
 #include <vector>
 #include <cstdlib> //for random numbers
 #include <ctime>
+#include <iomanip> //for epic formatting
 
 using namespace std;
 
@@ -36,18 +36,22 @@ int main(){
         Color randColor;
 
         randColor.red = rand() % 256;
-        randColor.blue = rand() % 256;
         randColor.green = rand() % 256;
+        randColor.blue = rand() % 256;
 
         colorList.push_back(randColor);
     }
 
-    //temporary test to make sure loop works
-    cout << "Random Color Red Value: " << colorList[0].red << endl;
-    cout << "Random Color Green Value: " << colorList[0].green << endl;
-    cout << "Random Color Blue Value: " << colorList[0].blue << endl;
+    //Time to make output look pretty
+    //Top Row
+    cout << " Color # " << setw(10) << "R Value" << setw(10) 
+         << "G Value" << setw(10) << "B Value" << endl; 
 
-    cout << n << " colors were created." << endl;
+    cout << " ------" << setw(12) << "------ " << setw(10)
+         << "------ " << setw(10) << "------ " << endl;
+
+
+    
 
     return 0;
 }
