@@ -2,13 +2,17 @@
 //COMSC - 210 - 5293
 //Lab 4 - Vector of Structs
 
-//Milestone 2: test your vector by populating it with a Color object
-//output it to the console.
+//Milestone 3: your code runs up to this point
+//outputs in any format the vector data for confirmation.
 
 #include <iostream>
 #include <vector>
+#include <cstdlib> //for random numbers
+#include <ctime>
 
 using namespace std;
+
+const int MIN = 25, MAX = 50;
 
 //Struct with three color values
 struct Color{
@@ -18,6 +22,10 @@ struct Color{
 };
 
 int main(){
+
+    srand(time(0));
+    int n = rand() % (MAX-MIN+1) + MIN; //reviewing rand()
+
 
     //Object for testing to console
     Color testColor = {192, 182, 96};
