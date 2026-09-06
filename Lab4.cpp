@@ -2,8 +2,8 @@
 //COMSC - 210 - 5293
 //Lab 4 - Vector of Structs
 
-//Milestone 1: the struct works and can received initialization data. 
-//Output the object's data to the console for confirmation.
+//Milestone 2: test your vector by populating it with a Color object
+//output it to the console.
 
 #include <iostream>
 #include <vector>
@@ -22,10 +22,15 @@ int main(){
     //Object for testing to console
     Color testColor = {192, 182, 96};
 
-    //Outputs each value of object testColor
-    cout << "Red Value: " << testColor.red << endl;
-    cout << "Green Value: " << testColor.green << endl;
-    cout << "Blue Value: " << testColor.blue << endl;
+    //Vector creation and putting testColor in it
+    vector<Color> colorList;
+
+    colorList.push_back(testColor);
+
+    //Outputting the vector this time
+    cout << "Vector Red Value: " << colorList[0].red << endl;
+    cout << "Vector Green Value: " << colorList[0].green << endl;
+    cout << "Vector Blue Value: " << colorList[0].blue << endl;
 
     cout << "TEST COMPLETE! :)" << endl;
 
