@@ -27,20 +27,8 @@ int main(){
     srand(time(0));
     int n = rand() % (MAX - MIN + 1) + MIN; //determines how many colors between 25-50
 
-    //Object for testing to console
-    Color testColor = {192, 182, 96};
-
-    //Vector creation and putting testColor in it
+    //Vector creation for the list of colors
     vector<Color> colorList;
-
-    colorList.push_back(testColor);
-
-    //Outputting the vector this time
-    //cout << "Vector Red Value: " << colorList[0].red << endl;
-    //cout << "Vector Green Value: " << colorList[0].green << endl;
-    //cout << "Vector Blue Value: " << colorList[0].blue << endl;
-
-    //cout << "TEST COMPLETE! :)" << endl;
 
     //Loop for creating colors with random values n times
     for(int i = 0; i < n; i++){
@@ -48,11 +36,18 @@ int main(){
         Color randColor;
 
         randColor.red = rand() % 256;
-        randCOlor.blue = rand() % 256;
+        randColor.blue = rand() % 256;
         randColor.green = rand() % 256;
 
         colorList.push_back(randColor);
     }
+
+    //temporary test to make sure loop works
+    cout << "Random Color Red Value: " << colorList[0].red << endl;
+    cout << "Random Color Green Value: " << colorList[0].green << endl;
+    cout << "Random Color Blue Value: " << colorList[0].blue << endl;
+
+    cout << n << " colors were created." << endl;
 
     return 0;
 }
